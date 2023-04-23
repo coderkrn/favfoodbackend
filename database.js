@@ -1,8 +1,9 @@
 const mongoose = require('mongoose')
+require('dotenv').config()
 
 // const mongoURI = "mongodb+srv://gofood:mygofood@cluster0.bklfcks.mongodb.net/goFood?retryWrites=true&w=majority";
-const mongoURI = "mongodb://gofood:mygofood@ac-co59rgk-shard-00-00.bklfcks.mongodb.net:27017,ac-co59rgk-shard-00-01.bklfcks.mongodb.net:27017,ac-co59rgk-shard-00-02.bklfcks.mongodb.net:27017/goFood?ssl=true&replicaSet=atlas-hq1m9l-shard-0&authSource=admin&retryWrites=true&w=majority";
-// const mongoURI = "mongodb://127.0.0.1:27017/goFood"
+const mongoURI = process.env.DATABASE
+// const mongoURI = "mongodb://gofood:mygofood@ac-co59rgk-shard-00-00.bklfcks.mongodb.net:27017,ac-co59rgk-shard-00-01.bklfcks.mongodb.net:27017,ac-co59rgk-shard-00-02.bklfcks.mongodb.net:27017/goFood?ssl=true&replicaSet=atlas-hq1m9l-shard-0&authSource=admin&retryWrites=true&w=majority"
 
 
 const connectToMongo = () => {
