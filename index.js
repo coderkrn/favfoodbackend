@@ -2,9 +2,10 @@ const express = require('express')
 const connectToMongo = require('./database')
 const app = express()
 const port = process.env.PORT || 5000
-
+const cors = require('cor')
 
 connectToMongo();
+app.use(cors())
 
 app.use((req, res, next)=>{
   res.setHeader("Access-control-Allow-Origin", "https://favfood.onrender.com/");
