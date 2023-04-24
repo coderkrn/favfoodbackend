@@ -7,7 +7,7 @@ const port = process.env.PORT || 5000
 connectToMongo();
 
 app.use((req, res, next)=>{
-  res.setHeader("Access-control-Allow-Origin", "http://localhost:3000");
+  res.setHeader("Access-control-Allow-Origin", "https://favfood.onrender.com/");
   res.header(
     "Access-control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
